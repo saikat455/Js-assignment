@@ -39,3 +39,14 @@ function sortMaker(arr) {
 }
 
 
+function findAddress(obj) {
+    if (typeof obj !== 'object' || obj === null) {
+        return "Please provide a valid input object.";
+    }
+
+    const street = obj.street || '__';
+    const house = obj.house || '__';
+    const society = obj.society || '__';
+
+    return street + ',' + house + ',' + society;
+}

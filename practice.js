@@ -51,21 +51,20 @@
 // console.log(sort);
 
 
-function findAddress(inputObject) {
-    // Input validation
-    if (typeof inputObject !== 'object' || inputObject === null) {
+function findAddress(obj) {
+    if (typeof obj !== 'object' || obj === null) {
         return "Please provide a valid input object.";
     }
 
-    const street = inputObject.street || '__';
-    const house = inputObject.house || '__';
-    const society = inputObject.society || '__';
+    const street = obj.street || '__';
+    const house = obj.house || '__';
+    const society = obj.society || '__';
 
     return street + ',' + house + ',' + society;
 }
 
 // Sample inputs and outputs
-console.log(findAddress({ street: 10, house: "15A", society: "Earth Perfect" })); // Output: "10,15A,Earth Perfect"
+// console.log(findAddress({ street: 10, house: "15A", society: "Earth Perfect" })); // Output: "10,15A,Earth Perfect"
 // console.log(findAddress({ street: 10, society: "Earth Perfect" })); // Output: "10,__,Earth Perfect"
 // console.log(findAddress({ street: 10 })); // Output: "10,__,__"
 // console.log(findAddress(null)); // Output: "Please provide a valid input object."

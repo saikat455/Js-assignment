@@ -41,7 +41,7 @@ function sortMaker(arr) {
 
 function findAddress(obj) {
     if (typeof obj !== 'object' || obj === null) {
-        return "Please provide a valid input object.";
+        return "Please enter a valid input object.";
     }
 
     const street = obj.street || '__';
@@ -49,4 +49,24 @@ function findAddress(obj) {
     const society = obj.society || '__';
 
     return street + ',' + house + ',' + society;
+}
+
+
+function canPay(changeArray,totalDue){
+    if(!Array.isArray(changeArray)) {
+        return "Please provide a valid array";
+    }
+    if (changeArray.length === 0) {
+        return "changeArray is empty.";
+    }
+    let sum = 0;
+    for (let i=0;i<changeArray.length;i++){
+        sum += changeArray[i];
+    }
+    if(sum >= totalDue){
+        return true;
+    }
+    else{
+        return false;
+    }
 }

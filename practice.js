@@ -51,20 +51,46 @@
 // console.log(sort);
 
 
-function findAddress(obj) {
-    if (typeof obj !== 'object' || obj === null) {
-        return "Please provide a valid input object.";
-    }
+// function findAddress(obj) {
+//     if (typeof obj !== 'object' || obj === null) {
+//         return "Please provide a valid input object.";
+//     }
 
-    const street = obj.street || '__';
-    const house = obj.house || '__';
-    const society = obj.society || '__';
+//     const street = obj.street || '__';
+//     const house = obj.house || '__';
+//     const society = obj.society || '__';
 
-    return street + ',' + house + ',' + society;
-}
+//     return street + ',' + house + ',' + society;
+// }
 
 // Sample inputs and outputs
 // console.log(findAddress({ street: 10, house: "15A", society: "Earth Perfect" })); // Output: "10,15A,Earth Perfect"
 // console.log(findAddress({ street: 10, society: "Earth Perfect" })); // Output: "10,__,Earth Perfect"
 // console.log(findAddress({ street: 10 })); // Output: "10,__,__"
 // console.log(findAddress(null)); // Output: "Please provide a valid input object."
+
+
+
+
+
+// function canPay(changeArray,totalDue){
+//     if(!Array.isArray(changeArray)) {
+//         return "Please provide a valid array";
+//     }
+//     if (changeArray.length === 0) {
+//         return "changeArray is empty.";
+//     }
+//     let sum = 0;
+//     for (let i=0;i<changeArray.length;i++){
+//         sum += changeArray[i];
+//     }
+//     if(sum >= totalDue){
+//         return true;
+//     }
+//     else{
+//         return false;
+//     }
+// }
+// const changeArray = [1,5,4];
+// const totalDue = 10;
+// console.log(canPay(changeArray, totalDue));
